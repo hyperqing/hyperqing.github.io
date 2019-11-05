@@ -66,6 +66,7 @@ footer:
   #   custom_text: 'Hosted on <a href="https://pages.coding.me" rel="nofollow noopener noreferrer">Coding Pages</a>'
   # Muilt line footer text is supported.
   custom_text:
+    - '<a href="https://gitee.com/clyoko" rel="nofollow" target="_blank">码云Gitee</a> | <a href="https://github.com/hyperqing" rel="nofollow" target="_blank">GitHub</a> | E-mail: <a href="mailto:469379004@qq.com">469379004@qq.com</a>'
     - '<a href="http://www.beian.miit.gov.cn" rel="nofollow" target="_blank">粤ICP备15089592号</a>'
 
 # ---------------------------------------------------------------
@@ -110,9 +111,9 @@ nav:
 # Used to choose which items will be displayed in share menu.
 sns_share:
   weibo: true
-  facebook: true
-  twitter: true
-  telegram: true
+  facebook: false
+  twitter: false
+  telegram: false
   googleplus: true
   linkedin: true
   qq: true
@@ -140,7 +141,7 @@ post:
   #       license: 'This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>'
   # You can also use Front-Matter `license` to override this setting
   # or use Front-Matter `hide_license: true` to hide license on spefic post
-  license:
+  license: '本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议'
 
 # Table Of Contents which will be show on right side of the post
 toc:
