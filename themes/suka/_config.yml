@@ -66,7 +66,7 @@ footer:
   #   custom_text: 'Hosted on <a href="https://pages.coding.me" rel="nofollow noopener noreferrer">Coding Pages</a>'
   # Muilt line footer text is supported.
   custom_text:
-    - '<a href="https://gitee.com/clyoko" rel="nofollow" target="_blank">码云Gitee</a> | <a href="https://github.com/hyperqing" rel="nofollow" target="_blank">GitHub</a> | E-mail: <a href="mailto:469379004@qq.com">469379004@qq.com</a>'
+    - '<a href="https://gitee.com/clyoko" rel="nofollow" target="_blank">码云Gitee</a> | <a href="https://github.com/hyperqing" rel="nofollow" target="_blank">GitHub</a> | E-mail: <a href="mailto:469379004@qq.com">469379004@qq.com</a> | <a href="/friend_links.html">友情链接</a>'
     - '<a href="http://www.beian.miit.gov.cn" rel="nofollow" target="_blank">粤ICP备15089592号</a>'
 
 # ---------------------------------------------------------------
