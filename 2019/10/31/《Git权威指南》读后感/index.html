@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+    <link rel="dns-prefetch" href="//s95.cnzz.com">
+
+
+
+
+    <!-- ## Preload ## -->
+    
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>《Git权威指南》 | 庆爷壮哉</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/ico" href="/img/suka-favicon.ico">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/github.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="庆爷壮哉"><meta name="msapplication-starturl" content="http://hyperqing.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="庆爷壮哉"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="《Git权威指南》 | 庆爷壮哉"><meta property="og:site_name" content="庆爷壮哉"><meta property="og:type" content="article"><meta property="og:url" content="http://hyperqing.com/2019/10/31/%E3%80%8AGit%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"><meta property="og:locale" content="zh-CN"><meta name="description" content="作者：蒋鑫 出版社：机械工业出版社  本书事无巨细地介绍了 Git  的方方面面，包括发展历史、产品对比、操作方法等。即使是日常操作，也花了大量的篇幅来进行说明。还介绍了很多平时工作上没见过的神奇操作和少接触的其他内容。 - Hyper Qing - 庆爷壮哉"><meta name="keywords" content="Git, Gogs, Gitlab"><meta property="article:published_time" content="2019-10-31T13:31:00.000Z"><meta property="article:modified_time" content="2020-03-21T16:42:44.083Z"><meta property="og:updated_time" content="2020-03-21T16:42:44.083Z"><meta property="article:author" content="Hyper Qing"><meta property="article:tag" content="Git, Gogs, Gitlab"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="http://hyperqing.com/2019/10/31/%E3%80%8AGit%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/">
+
+    <meta name="generator" content="Hexo 4.2.0">
+
+    <!-- ### Analytics ### -->
+    
+
+
+
+    <div hidden>
+    <script src="//s95.cnzz.com/z_stat.php?id=1278174770&web_id=1278174770" language="JavaScript"></script>
+</div>
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "http://hyperqing.com/2019/10/31/%E3%80%8AGit%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/",
+    "@type": "BlogPosting",
+    "logo": "http://hyperqing.com/img/suka-favicon.ico",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://hyperqing.com/2019/10/31/%E3%80%8AGit%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"
+    },
+    "headline": "《Git权威指南》 | 庆爷壮哉",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://hyperqing.com/img/suka-favicon.ico"
+    },
+    
+    "datePublished": "2019-10-31T13:31:00.000Z",
+    "dateModified": "2020-03-21T16:42:44.083Z",
+    "author": {
+        "@type": "Person",
+        "name": "Hyper Qing",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://hyperqing.com/img/default_avatar.png"
+        },
+        "description": "Hi, nice to meet you."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "庆爷壮哉",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://hyperqing.com/img/suka-favicon.ico"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://hyperqing.com/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "Git, Gogs, Gitlab",
+    "description": "作者：蒋鑫 出版社：机械工业出版社  本书事无巨细地介绍了 Git  的方方面面，包括发展历史、产品对比、操作方法等。即使是日常操作，也花了大量的篇幅来进行说明。还介绍了很多平时工作上没见过的神奇操作和少接触的其他内容。 - Hyper Qing - 庆爷壮哉"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">庆爷壮哉</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                Hi, nice to meet you.
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">首页</a>
+    
+    
+        <a href="/archives/" class="navbar-link">归档</a>
+    
+    
+        <a href="/search" class="navbar-link">搜索</a>
+    
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">分享</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
+        
+        <li class="menu-item">
+            <a href="http://service.weibo.com/share/share.php?appkey=&title=庆爷壮哉&url=http://hyperqing.com&pic=http://hyperqing.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
+        </li>
+        
+
+        <!-- Share Twitter -->
+        
+
+        <!-- Share Facebook -->
+        
+
+        <!-- Share Google+ -->
+        
+        <li class="menu-item">
+            <a href="https://plus.google.com/share?url=http://hyperqing.com" target="_blank" rel="external noopener noreferrer nofollow">分享到 Google+</a>
+        </li>
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://hyperqing.com&title=《Git权威指南》" target="_blank" rel="external noopener noreferrer nofollow">分享到 LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+        <li class="menu-item">
+            <a href="http://connect.qq.com/widget/shareqq/index.html?site=庆爷壮哉&title=《Git权威指南》&summary=&pics=http://hyperqing.com/img/suka-favicon.ico&url=http://hyperqing.com" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
+        </li>
+        
+
+        <!-- Share Telegram -->
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMQAAADECAAAAADlzdG3AAADNElEQVR42u3ay47jMAxE0fz/T3dvB4bFupTFGD242STIw/YJIEsq8vPzHzw+IkSIECFiHPEpHv9+5/Ygi/evn1+/dz3H3bnQdYkQMYSgF7h673rwHWj1evl9ESIGEavBRgb89XfV63Qcel0iRLyJuF7Q3Qmr33X/MBEi/gKic/GdG0FaFIoQ8Rai2tDcXTgZyNUCsQIdX8WKENFEVBvyN5+PpR0iRDQQMbSFExQZ2NVNIgUOj1JxESKa9Yl0shQAkAHZDefQMUSIGEDQRVdaBJIweHUzIJDb84gQMYQgF0WD4CowI2Hc6gZxex4RIgYQnQHaCc66g5UWXUSI+CYibdBJ0Z2GDmTwt8MzESIOIDoLPzIQU1DcCow7myIRIg4hVhNLmpS6RfxqA5TCiuUkKkLEAIIGWqeaV3YaXUSI+DYiNRySCSwVYzqbLPy5CBFfQKRNCg3PaCFyd2IUIWISkQYRLbLQILrafK0AqPAoQsQAYtlI25iIOhupTpEyrmJFiDiA2Fn8pc08KbhX75OiowgRkwgSIKdwi9wA0gRHAuxlpUiEiEOI3UaS7oaK4tMznrFFiHiAoBv7tJknwUC3CXI7UBYh4iGCLuLSoKQLwe7vb/8wESIGELS5ijyjYmGjgSWGFyJEDCLSpp0WX0iI1gG1wzMRIh4iaEGRFBlJkb4b0LWatkSIOIBIRcMqECNNvZ2B3g7WRIgYQFShLx2cVTBdFefJBIcWgCJEDCE6jSYpSFhdUFr8VTeCrbRDhIgNBF0AdhoWSSExTbDVnyNCxDSCFkRSMTBNjrGY2GgeEyFiAkGKKtVmhhRhEjQtRpfXJkLEAIIcnBQRSeNKFV7TDVqc7ESIOIAgm/fOhaWFHG0UjgNehIgBBN2UpFCrs4BMkyBubBEhYgBBD4oL5B/e8E5CsnJxKkLEAGK3eTFNSrTIWN00YqggQsQQggZgqThCmnhpKNEe2CJEHEaQgYVC3maxvhNox4EtQsQLiJ1mFLrpat8IRIh4GVEFzulmQP+M1AzzeGCLEAER1QAjQRtpWCGTJm0wFiFiEtFtSqHBcBrcqfgSgwoRIgYQf/khQoQIESLGHr/i6n8svg0YSgAAAABJRU5ErkJggg==" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">《Git权威指南》</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif" alt="Hyper Qing's Avatar">
+        <span>2019-10-31</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/%E4%B9%A6%E5%8D%95/">书单</a>
+        
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">分享本文</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+    <li class="menu-item">
+        <a href="http://service.weibo.com/share/share.php?appkey=&title=《Git权威指南》&url=http://hyperqing.com/2019/10/31/%E3%80%8AGit%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/&pic=http://hyperqing.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
+    </li>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+    <li class="menu-item">
+        <a href="https://plus.google.com/share?url=http://hyperqing.com/2019/10/31/%E3%80%8AGit%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" target="_blank" rel="external noopener noreferrer nofollow">分享到 Google+</a>
+    </li>
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://hyperqing.com/2019/10/31/%E3%80%8AGit%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/&title=庆爷壮哉" target="_blank" rel="external noopener noreferrer nofollow">分享到 LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+    <li class="menu-item">
+        <a href="http://connect.qq.com/widget/shareqq/index.html?site=庆爷壮哉&title=庆爷壮哉&summary=&pics=http://hyperqing.com/img/suka-favicon.ico&url=http://hyperqing.com/2019/10/31/%E3%80%8AGit%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
+    </li>
+    
+
+    <!-- Share Telegram -->
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMQAAADECAAAAADlzdG3AAADNElEQVR42u3ay47jMAxE0fz/T3dvB4bFupTFGD242STIw/YJIEsq8vPzHzw+IkSIECFiHPEpHv9+5/Ygi/evn1+/dz3H3bnQdYkQMYSgF7h673rwHWj1evl9ESIGEavBRgb89XfV63Qcel0iRLyJuF7Q3Qmr33X/MBEi/gKic/GdG0FaFIoQ8Rai2tDcXTgZyNUCsQIdX8WKENFEVBvyN5+PpR0iRDQQMbSFExQZ2NVNIgUOj1JxESKa9Yl0shQAkAHZDefQMUSIGEDQRVdaBJIweHUzIJDb84gQMYQgF0WD4CowI2Hc6gZxex4RIgYQnQHaCc66g5UWXUSI+CYibdBJ0Z2GDmTwt8MzESIOIDoLPzIQU1DcCow7myIRIg4hVhNLmpS6RfxqA5TCiuUkKkLEAIIGWqeaV3YaXUSI+DYiNRySCSwVYzqbLPy5CBFfQKRNCg3PaCFyd2IUIWISkQYRLbLQILrafK0AqPAoQsQAYtlI25iIOhupTpEyrmJFiDiA2Fn8pc08KbhX75OiowgRkwgSIKdwi9wA0gRHAuxlpUiEiEOI3UaS7oaK4tMznrFFiHiAoBv7tJknwUC3CXI7UBYh4iGCLuLSoKQLwe7vb/8wESIGELS5ijyjYmGjgSWGFyJEDCLSpp0WX0iI1gG1wzMRIh4iaEGRFBlJkb4b0LWatkSIOIBIRcMqECNNvZ2B3g7WRIgYQFShLx2cVTBdFefJBIcWgCJEDCE6jSYpSFhdUFr8VTeCrbRDhIgNBF0AdhoWSSExTbDVnyNCxDSCFkRSMTBNjrGY2GgeEyFiAkGKKtVmhhRhEjQtRpfXJkLEAIIcnBQRSeNKFV7TDVqc7ESIOIAgm/fOhaWFHG0UjgNehIgBBN2UpFCrs4BMkyBubBEhYgBBD4oL5B/e8E5CsnJxKkLEAGK3eTFNSrTIWN00YqggQsQQggZgqThCmnhpKNEe2CJEHEaQgYVC3maxvhNox4EtQsQLiJ1mFLrpat8IRIh4GVEFzulmQP+M1AzzeGCLEAER1QAjQRtpWCGTJm0wFiFiEtFtSqHBcBrcqfgSgwoRIgYQf/khQoQIESLGHr/i6n8svg0YSgAAAABJRU5ErkJggg==" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#扩展内容"><span class="post-toc-number">1.</span> <span class="post-toc-text">扩展内容</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <ul>
+<li>作者：蒋鑫</li>
+<li>出版社：机械工业出版社</li>
+</ul>
+<p>本书事无巨细地介绍了 Git  的方方面面，包括发展历史、产品对比、操作方法等。即使是日常操作，也花了大量的篇幅来进行说明。还介绍了很多平时工作上没见过的神奇操作和少接触的其他内容。</p>
+<a id="more"></a>
+
+<p>适合想要了解git前世今生，运作原理的人。对小白来说，信息量会比较大，使人觉得Git是个庞然大物，直接劝退。推荐看通俗易懂的 Git 教程学习后，再来看书作一个系统性了解学习。</p>
+<p>书中介绍了很多高级技巧，我觉得可能有一半内容在平时都不会用上。尤其是现在的IDE，GUI这么发达，更少机会去关注原理了。即使如此，我还是推荐有兴趣的读者阅读本书，说不定哪一天团队的Git使用上出了问题，你就能现场救火了。</p>
+<h4 id="扩展内容"><a href="#扩展内容" class="headerlink" title="扩展内容"></a>扩展内容</h4><ul>
+<li>Gogs：一个轻量级git服务，适合工作室小团队使用，只需一台树莓派就能使用该服务。</li>
+<li>GitLab：成熟的企业级git服务，硬件要求相对较高。</li>
+</ul>
+
+                    </article>
+                    
+    <blockquote class="post-license">
+        <p>
+            <strong>本文作者&nbsp;:&nbsp;Hyper Qing</strong>
+            <br>
+            <strong>
+            
+                本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议
+            </strong>
+            <br>
+            <strong>本文链接&nbsp;:&nbsp;</strong><a href="http://hyperqing.com/2019/10/31/%E3%80%8AGit%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/">http://hyperqing.com/2019/10/31/%E3%80%8AGit%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2020-03-22");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2019-10-31T13:31:00.000Z" itemprop="datePublished">2019-10-31</time>
+
+    , 最后修改于&nbsp;<time datetime="2020-03-21T16:42:44.083Z" itemprop="dateModified">2020-03-22</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/%E4%B9%A6%E5%8D%95/'>书单</a>
+
+</span>
+
+
+
+<span class="post-tags-list mt-2">
+
+<a class="post-tags-list-item" href="/tags/Git/" rel="tag">#&nbsp;Git</a>
+
+<a class="post-tags-list-item" href="/tags/Gogs/" rel="tag">#&nbsp;Gogs</a>
+
+<a class="post-tags-list-item" href="/tags/Gitlab/" rel="tag">#&nbsp;Gitlab</a>
+
+</span>
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2019/10/27/%E4%BD%BF%E7%94%A8%20Hexo%20+%20Caddy%20%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">使用 Hexo + Caddy 搭建博客</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="http://hyperqing.com">庆爷壮哉</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    <a href="https://gitee.com/clyoko" rel="nofollow" target="_blank">码云Gitee</a> | <a href="https://github.com/hyperqing" rel="nofollow" target="_blank">GitHub</a> | E-mail: <a href="mailto:469379004@qq.com">469379004@qq.com</a> | <a href="/friend_links.html">友情链接</a><br><a href="http://www.beian.miit.gov.cn" rel="nofollow" target="_blank">粤ICP备15089592号</a>
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
+(function() {
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
+})();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
+</html>
