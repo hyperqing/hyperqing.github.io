@@ -5,7 +5,7 @@ node_js:
 cache: npm
 branches:
   only:
-    - master # build master branch only
+    - blog # build master branch only
 before_install:
   - cd themes/suka
   - npm i --production
@@ -20,3 +20,4 @@ deploy:
   on:
     branch: master
   local-dir: public
+  target_branch: master
