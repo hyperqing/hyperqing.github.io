@@ -46,7 +46,7 @@ head:
   # Keywords
   #   Define meta keywords tag
   #   split with ','
-  keywords:
+  keywords: hyperqing,庆爷博客
   # Site Verification
   site_verification:
     google:
@@ -66,15 +66,15 @@ footer:
   #   custom_text: 'Hosted on <a href="https://pages.coding.me" rel="nofollow noopener noreferrer">Coding Pages</a>'
   # Muilt line footer text is supported.
   custom_text:
-    - '<a href="https://gitee.com/clyoko" rel="nofollow" target="_blank">码云Gitee</a> | <a href="https://github.com/hyperqing" rel="nofollow" target="_blank">GitHub</a> | E-mail: <a href="mailto:469379004@qq.com">469379004@qq.com</a> | <a href="/friend_links.html">友情链接</a>'
-    - '<a href="http://www.beian.miit.gov.cn" rel="nofollow" target="_blank">粤ICP备15089592号</a>'
+    - '<a href="https://gitee.com/clyoko" rel="nofollow noopener noreferrer" target="_blank">码云Gitee</a> | <a href="https://github.com/hyperqing" rel="nofollow" target="_blank">GitHub</a> | E-mail: <a href="mailto:469379004@qq.com">469379004@qq.com</a> | <a href="/friend_links.html">友情链接</a>'
+    - 'Hosted on Github Pages | Built by Travis Ci | <a href="http://www.beian.miit.gov.cn" rel="nofollow noopener noreferrer" target="_blank">粤ICP备15089592号</a>'
 
 # ---------------------------------------------------------------
 # Customize Settings
 # ---------------------------------------------------------------
 uiux:
   # Muilt line slogan is supported.
-  slogan: Hi, nice to meet you.
+  slogan: 全栈攻城狮
   # For most link color except post color
   link_color:
   primary_color:
@@ -82,7 +82,8 @@ uiux:
   bg_color:
 
 img:
-  avatar: '/img/default_avatar.png'
+  avatar: 'https://portrait.gitee.com/uploads/avatars/user/111/333278_clyoko_1578920341.png!avatar200'
+#  avatar: '/img/default_avatar.png'
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -160,7 +161,7 @@ toc:
 # If you want to use gitment or gitalk, you should get the client_id and client_secret form https://github.com/settings/applications/new
 # If you want to use valine, you should get the app_id and app_key form https://leancloud.cn , more setting please see https://valine.js.org
 comment:
-  use:
+  use: livere
   disqus:
     shortname: # disqus shortname
   disqusjs:
@@ -175,7 +176,7 @@ comment:
     conf:
     thread_key_type: path # id | path. Only when you generate static id for each post before you using 'id'
   livere:
-    data_uid:
+    data_uid: 'MTAyMC80OTIzNi8yNTczMA=='
   gitment:
     repo:
     owner:
